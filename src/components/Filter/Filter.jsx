@@ -1,10 +1,19 @@
-import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFilter } from '../../redux/sliceFilter';
 
-const Filter = ({ filter, handleFilterChange }) => {
+const Filter = function () {
+  const filter = useSelector(state => state.filter);
+  const dispatch = useDispatch();
   return (
     <label>
       Filter contacts by name
-      <input type="text" value={filter} onChange={handleFilterChange} />
+      <input
+        placeholder="Enter a name"
+        type="text"
+        name="filter"
+        value={filter}
+        onChange={e => dispatch(addFilter(e.currentTarget.value))}
+      />
     </label>
   );
 };
