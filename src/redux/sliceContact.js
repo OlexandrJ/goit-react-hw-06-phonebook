@@ -3,8 +3,8 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 export const sliceContact = createSlice({
   name: 'contacts',
   initialState: [
-    { id: nanoid(), name: 'Ivan Klimenko', number: '555-44-33' },
-    { id: nanoid(), name: 'Anna Kruz', number: '333-22-11' },
+    { id: nanoid(), name: 'Dan Clements', number: '655-16-79' },
+    { id: nanoid(), name: 'Ani Copeland', number: '337-99-26' },
   ],
   reducers: {
     addContact: {
